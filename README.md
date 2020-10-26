@@ -6,22 +6,6 @@ Fork and clone this repo.
 
 **Before you begin anything, run `npm install`.**
 
-## Before You Begin
-
-Every component has a test suite associated with it. There are 18 tests in
-total, grouped into 5 suites.
-
-To run the tests in the terminal, run `npm test`. The tests will rerun every
-time you save a file. When running `npm test` in the root of the repo there is
-an prompt to run all of the tests by entering `a`.
-
-When you start, all of the tests will be failing; your goal is to make as many
-pass as you can in the hour provided.
-
-> HINT: read the output of the failing tests.
-
-> Don't write anything in the `.test.js` files.
-
 ## Instructions
 
 You're going to build a simple contact list manager using React and React
@@ -44,21 +28,15 @@ Your `<App>` component should have state with a `contacts` property that is init
     <summary>Hint</summary> 
 
 ```js
-constructor(props) {
-  super(props)
-
-  this.state = {
-    contacts: []
-  }
-}
+const [contacts, setContacts] = useState([])
 ```
 </details>
 
-Use what you learned about [lifecycle methods](https://git.generalassemb.ly/seir-622/react-component-lifecycle#we-do-country-list) to make a fetch request when the component mounts and load the contacts in the state.  Set the url to use in your request as: `'/contacts.json'`.
+Use what you learned about useEffect to make a fetch request when the component mounts and load the contacts in the state.  Set the url to use in your request as: `'/contacts.json'`.
 
 Your `<App>` component should also render:
 
-- A div with a class name of `'App'`
+- A div with a name of `'App'`
 - Your `<Header>` component
 - Two `<Route />` components:
   - If the route is `"/"` then ***render*** the `<ContactList>` component and pass the contacts in state to it as a prop named `contacts`.
@@ -110,21 +88,21 @@ When submitted, you should save the new contact by updating your state inside of
 
 ## Rubric
 
-- App component is defined and exported
-- App component accepts the `contacts` json objects as a prop and the `contacts`
+- [] App component is defined and exported
+- [] App component accepts the `contacts` json objects as a prop and the `contacts`
   json object is properly passed
-- Router is defined and setup using the browser History API
-- Router includes a route for the homepage (`"/"`) and for the new contact page
+- [] Router is defined and setup using the browser History API
+- [] Router includes a route for the homepage (`"/"`) and for the new contact page
   (`"/new-contact"`)
-- Header component is defined and exported
-- Header component contains a title and two `<Link>`s, one to the homepage and
+- [] Header component is defined and exported
+- [] Header component contains a title and two `<Link>`s, one to the homepage and
   the other to the new contact page
-- ContactList component is defined and exported
-- ContactList component iterates through the contacts, rendering a Contact
+- [] ContactList component is defined and exported
+- [] ContactList component iterates through the contacts, rendering a Contact
   component for each
-- Contact component is defined and exported
-- Contact component is rendering the image, name and email address of a contact
-- NewContact is defined and exported
-- NewContact contains a form that adds a new contact to the parent App component
+- [] Contact component is defined and exported
+- [] Contact component is rendering the image, name and email address of a contact
+- [] NewContact is defined and exported
+- [] NewContact contains a form that adds a new contact to the parent App component
   state
 ```
